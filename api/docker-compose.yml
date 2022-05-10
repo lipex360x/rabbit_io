@@ -1,0 +1,17 @@
+version: "3.7"
+
+services:
+  mongodb:
+    image: bitnami/mongodb:latest
+    container_name: ${MONGODB_CONTAINER_NAME}
+    environment:
+      - ALLOW_EMPTY_PASSWORD=no
+      - MONGODB_ROOT_PASSWORD=root
+      - MONGODB_USERNAME=${MONGO_USER}
+      - MONGODB_PASSWORD=${MONGO_PASS}
+      - MONGODB_DATABASE=${MONGO_DB}
+    network_mode: host
+
+volumes:
+  pgdata:
+    driver: local

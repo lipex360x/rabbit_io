@@ -1,10 +1,8 @@
-import { config } from 'dotenv'
+import 'dotenv/config'
 import axios from 'axios'
 import Period from './enums/Period'
 import Candle from './models/Candle'
 import MessageChannel from './messages/MessageChannel'
-
-config()
 
 const sleep = (ms: number): Promise<void> => new Promise(resolve => setTimeout(resolve, ms));
 
