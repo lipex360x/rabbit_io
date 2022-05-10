@@ -1,4 +1,4 @@
-const time = 1000;
+const time = 1000
 
 enum Period {
   TEN_SECONDS     = (time * 10),
